@@ -20,3 +20,19 @@ Route::get("/dashboard", function () {
     return view('dashboard.pages.premiums');
 });
 
+Route::post('adminLogin', 'AuthController@adminLogin');
+Route::get('adminLogout', 'AuthController@adminLogout');
+Route::post('adminSignup','AuthController@adminSignup');
+
+Route::get('users','UsersController@index');
+
+Route::get('deleteUser/{id}','UsersController@deleteUser')->name('deleteUser');
+
+Route::get("/login", function () {
+    return view('dashboard.pages.users.login');
+});
+
+
+Route::get("/register", function () {
+    return view('dashboard.pages.users.register');
+});

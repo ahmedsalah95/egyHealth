@@ -18,19 +18,22 @@
 
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-
+                @if(auth()->user())
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <span class="hidden-xs">Alexander Pierce</span>
+
+                        <span class="hidden-xs">{{Auth()->user()->name}}</span>
+
                     </a>
                     <ul class="dropdown-menu">
                         <li class="user-footer">
                             <div class="pull-right">
-                                <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                <a href="{{url('/')}}/adminLogout" class="btn btn-default btn-flat">Sign out</a>
                             </div>
                         </li>
                     </ul>
                 </li>
+            @endif
                 <!-- Control Sidebar Toggle Button -->
             </ul>
         </div>
