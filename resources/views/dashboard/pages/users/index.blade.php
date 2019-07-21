@@ -15,12 +15,20 @@
                                 <tbody>
                                 <tr>
                                     <th class="text-center" style="width: 10px">username</th>
+                                    <th class="text-center">email</th>
+                                    <th class="text-center">specialization</th>
+                                    <th class="text-center">phone number</th>
+                                    <th class="text-center">address</th>
                                     <th class="text-center">actions</th>
 
                                 </tr>
                                 @foreach($users as $user)
                                     <tr>
                                         <td class="text-center">{{$user->name}}</td>
+                                        <td class="text-center">{{$user->email}}</td>
+                                        <td class="text-center">{{$user->specialization}}</td>
+                                        <td class="text-center">{{$user->phone}}</td>
+                                        <td class="text-center">{{$user->address}}</td>
                                         <td class="text-center">
                                             <a class="btn btn-danger" href="{{route('deleteUser',$user->id)}}">
                                                 <i class="fa fa-trash"></i></a>

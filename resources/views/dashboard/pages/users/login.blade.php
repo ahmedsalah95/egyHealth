@@ -134,10 +134,20 @@
                 width: 100%;
             }
         }
+
+
+        .login-form {
+            text-align: center;
+
+        }
+
+        .login-form button {
+            margin: auto;
+        }
     </style>
 </head>
 <body>
-<div class="text-center">
+<div class="login-form">
     <h2>Modal Login Form</h2>
 
     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>

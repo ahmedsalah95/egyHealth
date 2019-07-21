@@ -3,10 +3,12 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body {font-family: Arial, Helvetica, sans-serif;}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
         /* Full-width input fields */
-        input[type=text], input[type=password],input[type=email] {
+        input[type=text], input[type=password], input[type=email] {
             width: 100%;
             padding: 12px 20px;
             margin: 8px 0;
@@ -68,8 +70,8 @@
             width: 100%; /* Full width */
             height: 100%; /* Full height */
             overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            background-color: rgb(0, 0, 0); /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
             padding-top: 60px;
         }
 
@@ -104,13 +106,21 @@
         }
 
         @-webkit-keyframes animatezoom {
-            from {-webkit-transform: scale(0)}
-            to {-webkit-transform: scale(1)}
+            from {
+                -webkit-transform: scale(0)
+            }
+            to {
+                -webkit-transform: scale(1)
+            }
         }
 
         @keyframes animatezoom {
-            from {transform: scale(0)}
-            to {transform: scale(1)}
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
         }
 
         /* Change styles for span and cancel button on extra small screens */
@@ -119,15 +129,25 @@
                 display: block;
                 float: none;
             }
+
             .cancelbtn {
                 width: 100%;
             }
+        }
+
+        .register-form {
+            text-align: center;
+
+        }
+
+        .register-form button {
+            margin: auto;
         }
     </style>
 </head>
 <body>
 
-<div class="align-content-center">
+<div class="register-form">
     <h2>register Form</h2>
 
     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">register</button>
@@ -162,7 +182,7 @@
     var modal = document.getElementById('id01');
 
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }

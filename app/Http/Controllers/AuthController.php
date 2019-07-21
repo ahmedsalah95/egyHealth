@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
@@ -28,7 +30,10 @@ class AuthController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password),
-            'type'=>0
+            'type' => 0,
+            'phone' => $request->phone,
+            'specialization' => $request->specialization,
+            'address' => $request->address
         ]);
         $user->save();
         return response()->json([
@@ -48,7 +53,7 @@ class AuthController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password),
-            'type'=>0
+            'type' => 0
         ]);
         $user->save();
 
@@ -73,7 +78,7 @@ class AuthController extends Controller
             'remember_me' => 'boolean'
         ]);
         $credentials = request(['email', 'password']);
-        if(!Auth::attempt($credentials))
+        if (!Auth::attempt($credentials))
             return response()->json([
                 'message' => 'Unauthorized'
             ], 401);
@@ -102,28 +107,25 @@ class AuthController extends Controller
         ]);
         $credentials = request(['email', 'password']);
 
-        if(!Auth::attempt($credentials))
+        if (!Auth::attempt($credentials))
             return response()->json([
                 'message' => 'Unauthorized'
             ], 401);
         $user = $request->user();
-        if($user->type == 0)
-        {
+        if ($user->type == 0) {
             Auth::logout();
             return view('dashboard.pages.users.login');
-        }else{
+        } else {
             $tokenResult = $user->createToken('Personal Access Token');
             $token = $tokenResult->token;
-            cookie('token', $token,1000);
+            cookie('token', $token, 1000);
             if ($request->remember_me)
                 $token->expires_at = Carbon::now()->addWeeks(1);
             $token->save();
             $cookie = Cookie::get('token');
             $users = User::all();
-            return view('dashboard.pages.users.index')->with(['cookie'=>$cookie,'users'=>$users]);
+            return view('dashboard.pages.users.index')->with(['cookie' => $cookie, 'users' => $users]);
         }
-
-
 
 
     }
