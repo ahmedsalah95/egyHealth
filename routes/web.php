@@ -11,6 +11,8 @@
 |
 */
 
+use App\Main;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -36,3 +38,7 @@ Route::get("/login", function () {
 Route::get("/register", function () {
     return view('dashboard.pages.users.register');
 });
+
+Route::get("/main",'MainController@getMain');
+
+Route::post('imageUpload','MainController@logoUpload');

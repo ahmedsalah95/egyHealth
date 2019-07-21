@@ -16,9 +16,12 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="{{url('/')}}/users"><i class="fa fa-circle-o"></i> show users</a></li>
-
+                    <li><a href="{{url('/')}}/main"><i class="fa fa-circle-o"></i>logo and title </a></li>
                 </ul>
             </li>
+
+
+
 
         </ul>
         @endif
