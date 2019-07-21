@@ -46,7 +46,8 @@ class AuthController extends Controller
         $user = new User([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => bcrypt($request->password)
+            'password' => bcrypt($request->password),
+            'type'=>0
         ]);
         $user->save();
 
@@ -99,19 +100,29 @@ class AuthController extends Controller
             'remember_me' => 'boolean'
         ]);
         $credentials = request(['email', 'password']);
+
         if(!Auth::attempt($credentials))
             return response()->json([
                 'message' => 'Unauthorized'
             ], 401);
         $user = $request->user();
-        $tokenResult = $user->createToken('Personal Access Token');
-        $token = $tokenResult->token;
-        cookie('token', $token,1000);
-        if ($request->remember_me)
-            $token->expires_at = Carbon::now()->addWeeks(1);
-        $token->save();
-        $cookie = Cookie::get('token');
-        return view('dashboard.pages.users.index')->with(['cookie'=>$cookie]);
+        if($user->type == 0)
+        {
+            Auth::logout();
+            return view('dashboard.pages.users.login');
+        }else{
+            $tokenResult = $user->createToken('Personal Access Token');
+            $token = $tokenResult->token;
+            cookie('token', $token,1000);
+            if ($request->remember_me)
+                $token->expires_at = Carbon::now()->addWeeks(1);
+            $token->save();
+            $cookie = Cookie::get('token');
+            $users = User::all();
+            return view('dashboard.pages.users.index')->with(['cookie'=>$cookie,'users'=>$users]);
+        }
+
+
 
 
     }
