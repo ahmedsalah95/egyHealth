@@ -42,3 +42,12 @@ Route::get("/register", function () {
 Route::get("/main",'MainController@getMain');
 
 Route::post('imageUpload','MainController@logoUpload');
+
+Route::get('/sponsors','SponsorController@index');
+Route::get('/addSponsor','SponsorController@addSponsor');
+Route::post('/storeSponsor','SponsorController@storeSponsor');
+Route::get('/editSponsor/{id}','SponsorController@edit')->name('editSponsor');
+Route::post('/updateSponsor/{id}','SponsorController@updateSponsor');
+Route::get('/deleteSponsor/{id}','SponsorController@destroy')->name('deleteSponsor');
+//dental sponsors
+Route::get('/dentalSponsors','SponsorController@dentalSponsors');
