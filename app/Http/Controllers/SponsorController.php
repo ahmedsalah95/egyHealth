@@ -107,4 +107,9 @@ class SponsorController extends Controller
             return redirect('sponsors');
         }
     }
+    public function getAllSponsorsApi()
+    {
+        $sponsors = Sponsor::all();
+        return response()->json(['sponsors'=>$sponsors]);
+    }
 }

@@ -21,7 +21,7 @@ class CreateSponsorsTable extends Migration
             $table->mediumText('website')->nullable();
             $table->mediumText('android')->nullable();
             $table->mediumText('ios')->nullable();
-            $table->integer('type')->nullable();
+            $table->String('type')->nullable();
             $table->timestamps();
         });
     }
