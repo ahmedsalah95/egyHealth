@@ -25,6 +25,9 @@ Route::get("/dashboard", function () {
 Route::post('adminLogin', 'AuthController@adminLogin');
 Route::get('adminLogout', 'AuthController@adminLogout');
 //Route::post('adminSignup', 'AuthController@adminSignup');
+Route::get("/login", function () {
+    return view('dashboard.pages.users.login');
+});
 
 
 Route::group(['middleware' => ['auth']], function () {
@@ -33,10 +36,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('deleteUser/{id}', 'UsersController@deleteUser')->name('deleteUser');
 
-    Route::get("/login", function () {
-        return view('dashboard.pages.users.login');
-    });
-
+   
 
     Route::get("/register", function () {
         return view('dashboard.pages.users.register');
