@@ -51,3 +51,5 @@ Route::post('/updateSponsor/{id}','SponsorController@updateSponsor');
 Route::get('/deleteSponsor/{id}','SponsorController@destroy')->name('deleteSponsor');
 //dental sponsors
 Route::get('/dentalSponsors','SponsorController@dentalSponsors');
+
+

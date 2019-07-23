@@ -7,11 +7,13 @@ use Illuminate\Support\Facades\Auth;
 use App\Visitor;
 class VisitorsController extends Controller
 {
+    //this for api
     public function index()
     {
 
         return response()->json(Visitor::all());
     }
+    //this for api
     public function store(Request $request)
     {
         $request->validate([

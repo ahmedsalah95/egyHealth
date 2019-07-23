@@ -1,5 +1,7 @@
 @extends('dashboard.master')
 @section('content')
+
+@if(auth()->check())
     <div class="content-wrapper">
         <!-- Main content -->
         <section class="content">
@@ -48,4 +50,5 @@
         </section>
         <!-- /.content -->
     </div>
+@endif
 @stop

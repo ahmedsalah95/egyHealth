@@ -22,8 +22,6 @@
                         <li><a href="{{url('/')}}/dentalSponsors"><i class="fa fa-circle-o"></i>dental Sponsors</a></li>
                     </ul>
                 </li>
-
-
             </ul>
         @endif
     </section>
