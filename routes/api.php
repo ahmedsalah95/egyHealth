@@ -35,6 +35,10 @@ Route::group([
         Route::get('user', 'AuthController@user');
         Route::get('getMainApi', 'MainController@getMainApi');
         Route::get('getAllSponsorsApi','SponsorController@getAllSponsorsApi');
+        Route::post('visitor','VisitorsController@store');
+        Route::get('visitor','VisitorsController@index');
+        Route::post('exhibitor','ExhibitorsController@store');
+        Route::get('exhibitor','ExhibitorsController@index');
     });
 });
 
