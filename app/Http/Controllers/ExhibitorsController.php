@@ -54,7 +54,7 @@ class ExhibitorsController extends Controller
             'AreaRequired' => 'string|required',
         ]);
 
-        $exhibitor = new Visitor([
+        $exhibitor = new Exhibitor([
             'OragnizationName' => $request->OragnizationName ,
             'ChiefExecutiveFirstName'=>$request->ChiefExecutiveFirstName,
             'ChiefExecutiveDesignation' =>$request->ChiefExecutiveDesignation ,
