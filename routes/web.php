@@ -26,36 +26,41 @@ Route::post('adminLogin', 'AuthController@adminLogin');
 Route::get('adminLogout', 'AuthController@adminLogout');
 Route::post('adminSignup', 'AuthController@adminSignup');
 
-Route::get('users', 'UsersController@index');
 
-Route::get('deleteUser/{id}', 'UsersController@deleteUser')->name('deleteUser');
+Route::group(['middleware' => ['auth']], function () {
 
-Route::get("/login", function () {
-    return view('dashboard.pages.users.login');
-});
+    Route::get('users', 'UsersController@index');
+
+    Route::get('deleteUser/{id}', 'UsersController@deleteUser')->name('deleteUser');
+
+    Route::get("/login", function () {
+        return view('dashboard.pages.users.login');
+    });
 
 
-Route::get("/register", function () {
-    return view('dashboard.pages.users.register');
-});
+    Route::get("/register", function () {
+        return view('dashboard.pages.users.register');
+    });
 
-Route::get("/main", 'MainController@getMain');
+    Route::get("/main", 'MainController@getMain');
 
-Route::post('imageUpload', 'MainController@logoUpload');
+    Route::post('imageUpload', 'MainController@logoUpload');
 
-Route::get('/sponsors', 'SponsorController@index');
-Route::get('/addSponsor', 'SponsorController@addSponsor');
-Route::post('/storeSponsor', 'SponsorController@storeSponsor');
-Route::get('/editSponsor/{id}', 'SponsorController@edit')->name('editSponsor');
-Route::post('/updateSponsor/{id}', 'SponsorController@updateSponsor');
-Route::get('/deleteSponsor/{id}', 'SponsorController@destroy')->name('deleteSponsor');
+    Route::get('/sponsors', 'SponsorController@index');
+    Route::get('/addSponsor', 'SponsorController@addSponsor');
+    Route::post('/storeSponsor', 'SponsorController@storeSponsor');
+    Route::get('/editSponsor/{id}', 'SponsorController@edit')->name('editSponsor');
+    Route::post('/updateSponsor/{id}', 'SponsorController@updateSponsor');
+    Route::get('/deleteSponsor/{id}', 'SponsorController@destroy')->name('deleteSponsor');
 //dental sponsors
-Route::get('/dentalSponsors', 'SponsorController@dentalSponsors');
+    Route::get('/dentalSponsors', 'SponsorController@dentalSponsors');
 
 //notifications
-Route::get('notifications','MainController@notifications');
-Route::get('notificationShow', 'MainController@notificationShow');
-Route::post('notificationStore', 'MainController@notificationStore');
-Route::get('deleteNotification/{id}', 'MainController@deleteNotification')->name('deleteNotification');
+    Route::get('notifications', 'MainController@notifications');
+    Route::get('notificationShow', 'MainController@notificationShow');
+    Route::post('notificationStore', 'MainController@notificationStore');
+    Route::get('deleteNotification/{id}', 'MainController@deleteNotification')->name('deleteNotification');
+});
+
 
 

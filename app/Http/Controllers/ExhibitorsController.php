@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Exhibitor;
+use Illuminate\Support\Facades\Mail;
+
 class ExhibitorsController extends Controller
 {
     public function index()
@@ -97,6 +99,7 @@ class ExhibitorsController extends Controller
 
 
         $exhibitor->save();
+
         return response()->json([
             'message' => 'Successfully created Exhibitor!'
         ], 201);
