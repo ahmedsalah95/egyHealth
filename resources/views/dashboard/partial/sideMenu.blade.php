@@ -20,6 +20,8 @@
                         <li><a href="{{url('/')}}/addSponsor"><i class="fa fa-circle-o"></i>Add Sponsor</a></li>
                         <li><a href="{{url('/')}}/sponsors"><i class="fa fa-circle-o"></i>normal Sponsors</a></li>
                         <li><a href="{{url('/')}}/dentalSponsors"><i class="fa fa-circle-o"></i>dental Sponsors</a></li>
+                        <li><a href="{{url('/')}}/notifications"><i class="fa fa-circle-o"></i>show all
+                                sent notifications</a></li>
                     </ul>
                 </li>
 
