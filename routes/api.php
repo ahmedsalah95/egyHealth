@@ -39,6 +39,7 @@ Route::group([
         Route::get('visitor','VisitorsController@index');
         Route::post('exhibitor','ExhibitorsController@store');
         Route::get('exhibitor','ExhibitorsController@index');
+        Route::get('getNotification','MainController@getNotification');
     });
 });
 

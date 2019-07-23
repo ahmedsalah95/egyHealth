@@ -11,6 +11,15 @@
                         <div class="box-header">
                             <h3 class="box-title">Sponsors</h3>
                         </div>
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                         @endif
                         <!-- /.box-header -->
                         <div class="box-body no-padding">
                             <table class="table table-striped">

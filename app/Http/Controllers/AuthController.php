@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Exhibitors;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 use App\User;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Mail;
 
 class AuthController extends Controller
 {
@@ -56,7 +58,7 @@ class AuthController extends Controller
             'type' => 0
         ]);
         $user->save();
-
+        Mail::to('registration@egyhealthexpo.com')->send(new Exhibitors);
         return view('dashboard.pages.users.login');
     }
 
