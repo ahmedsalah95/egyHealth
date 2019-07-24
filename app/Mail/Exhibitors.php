@@ -6,13 +6,14 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
+
 use App\User;
+
 class Exhibitors extends Mailable
 {
     use Queueable, SerializesModels;
 
-    protected $user;
-
+    public $user;
     /**
      * Create a new message instance.
      *
@@ -20,7 +21,7 @@ class Exhibitors extends Mailable
      */
     public function __construct(User $user)
     {
-        return $this->$user;
+         $this->user = $user;
     }
 
     /**
@@ -30,6 +31,6 @@ class Exhibitors extends Mailable
      */
     public function build()
     {
-        return $this->view('dashboard.pages.main.mail')->with('user',$user);
+        return $this->view('dashboard.pages.main.mail');
     }
 }
