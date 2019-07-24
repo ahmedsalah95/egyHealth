@@ -12,6 +12,24 @@
     <h1>Conference Registration from mobile</h1>
     
    
+        {{$conference->organizationName}} 
+        {{$conference->city}}
+        {{$conference->country}}
+        {{$conference->website}}
+        {{$conference->fax }}
+        {{$conference->designation }}
+        {{$conference->state }}
+        {{$conference->email}}
+        {{$conference->phone}} 
+        {{$conference->mobile }}
+        {{$conference->firstName}}
+        {{$conference->lastName}}
+        {{$conference->addressLine1 }}
+        {{$conference->addressLine2 }}
+        {{$conference->alternateEmail }}
+        {{$conference->conferenceTitle }}
+        {{$conference->title }}
         
+    
 </body>
 </html>
