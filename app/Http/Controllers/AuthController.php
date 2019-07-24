@@ -38,7 +38,7 @@ class AuthController extends Controller
             'address' => $request->address
         ]);
         $user->save();
-        Mail::to('registration@egyhealthexpo.com')->send(new Exhibitors);
+        Mail::to('registration@egyhealthexpo.com')->send(new Exhibitors($user));
         return response()->json([
             'message' => 'Successfully created user!'
         ], 201);

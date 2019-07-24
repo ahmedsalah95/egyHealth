@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-<h1>welcome test message</h1>
+    <h1>welcome test message</h1>
+    <p style="color: red" >username:{{ $user->name}}</p>
 </body>
 </html>
