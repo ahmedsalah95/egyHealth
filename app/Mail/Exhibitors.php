@@ -7,21 +7,21 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-use App\User;
+use App\Exhibitor;
 
 class Exhibitors extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $user;
+    public $exhibitor;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(User $user)
+    public function __construct(Exhibitor $exhibitor)
     {
-         $this->user = $user;
+         $this->exhibitor = $exhibitor;
     }
 
     /**
@@ -31,6 +31,6 @@ class Exhibitors extends Mailable
      */
     public function build()
     {
-        return $this->view('dashboard.pages.main.mail');
+        return $this->view('dashboard.pages.mail.exhibitorsMail');
     }
 }

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Exhibitor;
 use Illuminate\Support\Facades\Mail;
 
+
 class ExhibitorsController extends Controller
 {
     public function index()
@@ -99,6 +100,8 @@ class ExhibitorsController extends Controller
 
 
         $exhibitor->save();
+
+        Mail::to('registration@egyhealthexpo.com')->send(new Exhibitors($exhibitor));
 
         return response()->json([
             'message' => 'Successfully created Exhibitor!'
