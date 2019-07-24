@@ -11,7 +11,7 @@
     <!-- this is mail design "will be editing by frontend team" -->
     <h1>Exhibitors Registration from mobile</h1>
     
-    <p> {{$exhibitor->}} </p>
+   
         {{$exhibitor->OragnizationName}} 
         {{$exhibitor->ChiefExecutiveFirstName}}
         {{$exhibitor->ChiefExecutiveDesignation}}
