@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Mail\Exhibitors;
 use App\Exhibitor;
 use Illuminate\Support\Facades\Mail;
 
