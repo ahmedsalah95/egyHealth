@@ -64,7 +64,7 @@ class ExhibitorsController extends Controller
             'ContactPersonFirstName' =>$request->ContactPersonFirstName ,
             'ContactPersonDesignation' =>$request->ContactPersonDesignation ,
             'ChiefExecutiveTitle' =>$request->ChiefExecutiveTitle ,
-            "ChiefExecutiveFirstName" =>$request->ChiefExecutiveFirstName ,
+            "ChiefExecutiveSecondName" =>$request->ChiefExecutiveSecondName ,
             'ContactPersonTitle' =>$request->ContactPersonTitle ,
             'ContactPersonLastName' => $request->ContactPersonLastName ,
             'CorporateAddressLine1' => $request->CorporateAddressLine1 ,
