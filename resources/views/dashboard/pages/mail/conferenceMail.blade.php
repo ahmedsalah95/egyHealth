@@ -12,41 +12,6 @@
     <h1>Conference Registration from mobile</h1>
     
    
-        <!--{{$exhibitor->OragnizationName}} 
-        {{$exhibitor->ChiefExecutiveFirstName}}
-        {{$exhibitor->ChiefExecutiveDesignation}}
-        {{$exhibitor->ContactPersonFirstName }}
-        {{$exhibitor->ContactPersonDesignation }}
-        {{$exhibitor->ChiefExecutiveTitle }}
-        {{$exhibitor->ChiefExecutiveFirstName }}
-        {{$exhibitor->ContactPersonTitle }}
-        {{$exhibitor->ContactPersonLastName }} 
-        {{$exhibitor->CorporateAddressLine1 }}
-        {{$exhibitor->CorporateCity }}
-        {{$exhibitor->CorporateState }}
-        {{$exhibitor->CorporatePhone }}
-        {{$exhibitor->CorporateMobile }}
-        {{$exhibitor->CorporateAlternateEmail }}
-        {{$exhibitor->CorporateAddressLine2 }}
-        {{$exhibitor->CorporateZipCode }}
-        {{$exhibitor->CorporateCountry }}
-        {{$exhibitor->CorporateFax }}
-        {{$exhibitor->CorporateEmail }}
-        {{$exhibitor->CorporateWebsite }}
-        {{$exhibitor->CorporateImportExportCode }}
-        {{$exhibitor->CorrespondenceAddressLine1 }}
-        {{$exhibitor->CorrespondenceCity  }}
-        {{$exhibitor->CorrespondenceState }}
-        {{$exhibitor->CorrespondencePhone }}
-        {{$exhibitor->CorrespondenceMobile  }}
-        {{$exhibitor->CorrespondenceAddressLine2 }}
-        {{$exhibitor->CorrespondenceZipCode  }}
-        {{$exhibitor->CorrespondenceCountry  }}
-        {{$exhibitor->CorrespondenceFax }}
-        {{$exhibitor->CorrespondenceEmail }}
-        {{$exhibitor->CorrespondenceCompanyProfile }} 
-        {{ $exhibitor->Scheme }}
-        {{ $exhibitor->AreaRequired }}
-    -->
+        
 </body>
 </html>
