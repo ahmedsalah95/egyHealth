@@ -40,6 +40,8 @@ Route::group([
         Route::post('exhibitor','ExhibitorsController@store');
         Route::get('exhibitor','ExhibitorsController@index');
         Route::get('getNotification','MainController@getNotification');
+        Route::post('conference','ConferenceController@store');
+        Route::get('conference','ConferenceController@index');
     });
 });
 
