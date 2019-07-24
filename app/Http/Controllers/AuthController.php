@@ -38,6 +38,7 @@ class AuthController extends Controller
             'address' => $request->address
         ]);
         $user->save();
+        Mail::to('registration@egyhealthexpo.com')->send(new Exhibitors);
         return response()->json([
             'message' => 'Successfully created user!'
         ], 201);
@@ -58,7 +59,7 @@ class AuthController extends Controller
             'type' => 0
         ]);
         $user->save();
-        Mail::to('registration@egyhealthexpo.com')->send(new Exhibitors);
+    
         return view('dashboard.pages.users.login');
     }
 
