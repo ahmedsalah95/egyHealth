@@ -17,47 +17,47 @@ class ExhibitorsController extends Controller
     }
     public function store(Request $request)
     {
-        /*$request->validate([
-            'OragnizationName' => 'required|string',
-            'ChiefExecutiveFirstName'=>'required|string',
-            'ChiefExecutiveDesignation' => 'required|string',
-            'ContactPersonFirstName' => 'required|string',
-            'ContactPersonDesignation' => 'required|string',
-            'ChiefExecutiveTitle' => 'required|string',
-            'ChiefExecutiveSecondName' => 'required|string',
-            'ContactPersonTitle' => 'requried|string',
-            'ContactPersonLastName' => 'required|string',
-            'CorporateAddressLine1' => 'required|string',
-            'CorporateCity' => 'string|required',
-            'CorporateState' => 'required|string',
-            'CorporatePhone' => 'string',
-            'CorporateMobile' => 'string|required',
+        $request->validate([
+            'OragnizationName' => 'required',
+            'ChiefExecutiveFirstName'=>'required',
+            'ChiefExecutiveDesignation' => 'required',
+            'ContactPersonFirstName' => 'required',
+            'ContactPersonDesignation' => 'required',
+            'ChiefExecutiveTitle' => 'required',
+            'ChiefExecutiveSecondName' => 'required',
+            'ContactPersonTitle' => 'requried',
+            'ContactPersonLastName' => 'required',
+            'CorporateAddressLine1' => 'required',
+            'CorporateCity' => 'required',
+            'CorporateState' => 'required',
+           
+            'CorporateMobile' => 'required',
             'CorporateAlternateEmail' => 'required|email',
-            'CorporateAddressLine2' => 'string',
-            'CorporateZipCode' => 'string|required',
-            'CorporateCountry' => 'string|required',
-            'CorporateFax' => 'string',
+            
+            'CorporateZipCode' => 'required',
+            'CorporateCountry' => 'required',
+            
             'CorporateEmail' => 'required|email',
-            'CorporateWebsite' => 'string',
-            'CorporateImportExportCode' => 'string|required',
+            
+            'CorporateImportExportCode' => 'required',
 
-            'CorrespondenceAddressLine1' => 'required|string',
-            'CorrespondenceCity' => 'string|required',
-            'CorrespondenceState' => 'required|string',
-            'CorrespondencePhone' => 'string',
-            'CorrespondenceMobile' => 'string|required',
-            'CorrespondenceAddressLine2' => 'string',
-            'CorrespondenceZipCode' => 'string|required',
-            'CorrespondenceCountry' => 'string|required',
-            'CorrespondenceFax' => 'string',
+            'CorrespondenceAddressLine1' => 'required',
+            'CorrespondenceCity' => 'required',
+            'CorrespondenceState' => 'required',
+            
+            'CorrespondenceMobile' => 'required',
+            
+            'CorrespondenceZipCode' => 'required',
+            'CorrespondenceCountry' => 'required',
+        
             'CorrespondenceEmail' => 'required|email',
-            'CorrespondenceCompanyProfile' => 'string|required',
+            'CorrespondenceCompanyProfile' => 'required',
 
 
-            'Scheme' => 'string|required',
-            'AreaRequired' => 'string|required',
+            'Scheme' => 'required',
+            'AreaRequired' => 'required',
         ]);
-            */
+            
         $exhibitor = new Exhibitor([
             'OragnizationName' => $request->OragnizationName ,
             'ChiefExecutiveFirstName'=>$request->ChiefExecutiveFirstName,
