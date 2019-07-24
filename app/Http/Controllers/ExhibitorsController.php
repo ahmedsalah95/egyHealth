@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Exhibitor;
 use Illuminate\Support\Facades\Mail;
 
@@ -16,7 +17,7 @@ class ExhibitorsController extends Controller
     }
     public function store(Request $request)
     {
-        $request->validate([
+        $this->validate([
             'OragnizationName' => 'required|string',
             'ChiefExecutiveFirstName'=>'required|string',
             'ChiefExecutiveDesignation' => 'required|string',
