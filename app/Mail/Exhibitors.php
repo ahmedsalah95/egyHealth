@@ -11,7 +11,7 @@ class Exhibitors extends Mailable
 {
     use Queueable, SerializesModels;
 
-    //protected $user;
+    protected $user;
 
     /**
      * Create a new message instance.
@@ -30,6 +30,6 @@ class Exhibitors extends Mailable
      */
     public function build()
     {
-        return $this->view('dashboard.pages.main.mail');
+        return $this->view('dashboard.pages.main.mail')->with('user',$user);
     }
 }
