@@ -17,7 +17,7 @@ class ExhibitorsController extends Controller
     }
     public function store(Request $request)
     {
-        $this->validate([
+        $request->validate([
             'OragnizationName' => 'required|string',
             'ChiefExecutiveFirstName'=>'required|string',
             'ChiefExecutiveDesignation' => 'required|string',
