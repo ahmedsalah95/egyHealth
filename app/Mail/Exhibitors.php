@@ -11,7 +11,8 @@ class Exhibitors extends Mailable
 {
     use Queueable, SerializesModels;
 
-    protected $user;
+    //protected $user;
+
     /**
      * Create a new message instance.
      *

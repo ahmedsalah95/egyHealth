@@ -9,6 +9,6 @@
 </head>
 <body>
     <h1>welcome test message</h1>
-    <p style="color: red" >username:{{ $user->name}}</p>
+    <p style="color: red" > username: {{ $user->name }}</p>
 </body>
 </html>
