@@ -62,6 +62,13 @@ Route::get('/dentalSponsors','SponsorController@dentalSponsors');
     Route::get('notificationShow', 'MainController@notificationShow');
     Route::post('notificationStore', 'MainController@notificationStore');
     Route::get('deleteNotification/{id}', 'MainController@deleteNotification')->name('deleteNotification');
+   
+   //places
+    Route::get('/places','PlacesController@index');
+    Route::get('/addplace','PlacesController@create');
+    Route::get('deletesponserplace/{id}','PlacesController@deleteSponsorPlace')->name('deleteSponsorPlace');
+    Route::post('/storePlace','PlacesController@storePlace');
+
 });
 
 

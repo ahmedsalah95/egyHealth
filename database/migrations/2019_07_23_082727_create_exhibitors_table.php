@@ -47,7 +47,7 @@ class CreateExhibitorsTable extends Migration
             $table->string('CorrespondenceCountry') ;
             $table->string('CorrespondenceFax')->nullable() ;
             $table->string('CorrespondenceEmail') ;
-            $table->string('CorrespondenceCompanyProfile') ;
+            $table->text('CorrespondenceCompanyProfile') ;
             $table->string('Scheme') ;
             $table->string('AreaRequired') ;
             $table->timestamps();

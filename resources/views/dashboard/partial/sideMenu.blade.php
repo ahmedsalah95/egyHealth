@@ -24,6 +24,28 @@
                                 sent notifications</a></li>
                     </ul>
                 </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-address-card"></i> <span>Places</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li>
+                            <a href="{{url('/')}}/places">
+                                <i class="fa fa-circle-o"></i>
+                                Assigned Places
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{url('/')}}/addplace">
+                                <i class="fa fa-circle-o"></i>
+                                Add Place To Sponsor
+                            </a>
+                        </li>                        
+                    </ul>
+                </li>
             </ul>
         @endif
     </section>
